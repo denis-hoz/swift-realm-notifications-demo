@@ -16,7 +16,7 @@
 		C8220BC9CDFF4FF3392D7AC6 /* DKGitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8220216071085B112B18D8A /* DKGitHubAPI.swift */; };
 		C8220BFE4C5A24A7A274CE47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82207C906529295FACFC440 /* AppDelegate.swift */; };
 		C8220CC1152D2F65B42661DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8220942CD44221AFC5310AF /* Main.storyboard */; };
-		C8220EF7DB4FE2AAC1495298 /* DKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822043A9AF9A96BF52338BE /* DKViewController.swift */; };
+		C8220EF7DB4FE2AAC1495298 /* DKReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C822043A9AF9A96BF52338BE /* DKReposViewController.swift */; };
 		C8220FBB47DA254E30AC479D /* DKGitHubAPIProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82203441BA16C9FA4D43DD4 /* DKGitHubAPIProviding.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		C8220204D9A777479F6151D8 /* DKRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKRepo.swift; sourceTree = "<group>"; };
 		C8220216071085B112B18D8A /* DKGitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKGitHubAPI.swift; sourceTree = "<group>"; };
 		C82203441BA16C9FA4D43DD4 /* DKGitHubAPIProviding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKGitHubAPIProviding.swift; sourceTree = "<group>"; };
-		C822043A9AF9A96BF52338BE /* DKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKViewController.swift; sourceTree = "<group>"; };
+		C822043A9AF9A96BF52338BE /* DKReposViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKReposViewController.swift; sourceTree = "<group>"; };
 		C82205B68189219176C6CD12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8220741FCA4CECF542078BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8220756D8A1CB5257195686 /* swift-realm-notifications-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-realm-notifications-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +94,7 @@
 		C822052FD0C001A411C47DD1 /* Repo */ = {
 			isa = PBXGroup;
 			children = (
-				C822043A9AF9A96BF52338BE /* DKViewController.swift */,
+				C822043A9AF9A96BF52338BE /* DKReposViewController.swift */,
 				C8220082CDB3EA52FACC4E9C /* TableView */,
 			);
 			path = Repo;
@@ -234,7 +234,7 @@
 				C82203FA199455A417EAECB9 /* DKRepo.swift in Sources */,
 				C8220FBB47DA254E30AC479D /* DKGitHubAPIProviding.swift in Sources */,
 				C8220BC9CDFF4FF3392D7AC6 /* DKGitHubAPI.swift in Sources */,
-				C8220EF7DB4FE2AAC1495298 /* DKViewController.swift in Sources */,
+				C8220EF7DB4FE2AAC1495298 /* DKReposViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
