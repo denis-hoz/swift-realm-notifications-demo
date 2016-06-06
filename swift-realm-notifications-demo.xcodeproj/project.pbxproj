@@ -10,7 +10,6 @@
 		3B75DCC21D01DA6300FBEF98 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B75DCC01D01DA6300FBEF98 /* Realm.framework */; };
 		3B75DCC31D01DA6300FBEF98 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B75DCC11D01DA6300FBEF98 /* RealmSwift.framework */; };
 		C8220059F1413E22FF66924B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8220FDC1BEF464D45D1A810 /* Assets.xcassets */; };
-		C82202A19D182C94DBB9553F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C822097E92CA68C4828FC1F3 /* Info.plist */; };
 		C82203FA199455A417EAECB9 /* DKRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8220204D9A777479F6151D8 /* DKRepo.swift */; };
 		C82205B7A435FB5DF6C12A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C822088CFFE2E6CCD7D8CDCE /* LaunchScreen.storyboard */; };
 		C8220917A45F2331ACECB9DE /* DKRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8220B167FDA815111622DA0 /* DKRepoTableViewCell.swift */; };
@@ -68,6 +67,7 @@
 				C822091E2CC526F2D2F9A395 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		C82202544BBD1B6392E2264B /* Cell */ = {
 			isa = PBXGroup;
@@ -195,6 +195,7 @@
 			attributes = {
 				CLASSPREFIX = DK;
 				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Denis Kapusta Demo";
 			};
 			buildConfigurationList = C82208545FBE41F7D1ED8EA1 /* Build configuration list for PBXProject "swift-realm-notifications-demo" */;
@@ -219,7 +220,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C82202A19D182C94DBB9553F /* Info.plist in Resources */,
 				C8220059F1413E22FF66924B /* Assets.xcassets in Resources */,
 				C82205B7A435FB5DF6C12A3F /* LaunchScreen.storyboard in Resources */,
 				C8220CC1152D2F65B42661DD /* Main.storyboard in Resources */,
