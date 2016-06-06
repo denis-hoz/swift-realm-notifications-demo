@@ -13,6 +13,7 @@
 		C82202A19D182C94DBB9553F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C822097E92CA68C4828FC1F3 /* Info.plist */; };
 		C82203FA199455A417EAECB9 /* DKRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8220204D9A777479F6151D8 /* DKRepo.swift */; };
 		C82205B7A435FB5DF6C12A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C822088CFFE2E6CCD7D8CDCE /* LaunchScreen.storyboard */; };
+		C8220917A45F2331ACECB9DE /* DKRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8220B167FDA815111622DA0 /* DKRepoTableViewCell.swift */; };
 		C8220BC9CDFF4FF3392D7AC6 /* DKGitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8220216071085B112B18D8A /* DKGitHubAPI.swift */; };
 		C8220BFE4C5A24A7A274CE47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82207C906529295FACFC440 /* AppDelegate.swift */; };
 		C8220CC1152D2F65B42661DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8220942CD44221AFC5310AF /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		C8220756D8A1CB5257195686 /* swift-realm-notifications-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-realm-notifications-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82207C906529295FACFC440 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C822097E92CA68C4828FC1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		C8220B167FDA815111622DA0 /* DKRepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKRepoTableViewCell.swift; sourceTree = "<group>"; };
 		C8220BD9ECD9B1EE9B0655EE /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		C8220FDC1BEF464D45D1A810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 		C82202544BBD1B6392E2264B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				C8220B167FDA815111622DA0 /* DKRepoTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -94,8 +97,8 @@
 		C822052FD0C001A411C47DD1 /* Repo */ = {
 			isa = PBXGroup;
 			children = (
-				C822043A9AF9A96BF52338BE /* DKReposViewController.swift */,
 				C8220082CDB3EA52FACC4E9C /* TableView */,
+				C822043A9AF9A96BF52338BE /* DKReposViewController.swift */,
 			);
 			path = Repo;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				C8220FBB47DA254E30AC479D /* DKGitHubAPIProviding.swift in Sources */,
 				C8220BC9CDFF4FF3392D7AC6 /* DKGitHubAPI.swift in Sources */,
 				C8220EF7DB4FE2AAC1495298 /* DKReposViewController.swift in Sources */,
+				C8220917A45F2331ACECB9DE /* DKRepoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

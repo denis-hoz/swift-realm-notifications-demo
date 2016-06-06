@@ -11,14 +11,15 @@ import UIKit
 
 
 class DKReposViewController: UIViewController {
-    let gitHubAPI: DKGitHubAPIProviding
+	let gitHubAPI: DKGitHubAPIProviding
 	
 	init(gitHubAPIProviding: DKGitHubAPIProviding) {
+		gitHubAPI = gitHubAPIProviding
 		super.init(nibName: nil, bundle: nil)
-		gitHubAPI = gitHubAPIProviding;
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
+		gitHubAPI = DKGitHubAPI()
 		super.init(coder: aDecoder)
 	}
 
@@ -32,10 +33,6 @@ class DKReposViewController: UIViewController {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
     }
-
-
-
-
 }
 
 extension DKReposViewController: UITableViewDataSource {
@@ -44,7 +41,10 @@ extension DKReposViewController: UITableViewDataSource {
     }
 
     @available(iOS 2.0, *) func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return nil
+		let cell = tableView.dequeueReusableCellWithIdentifier("DKRepoTableViewCell", forIndexPath: indexPath) as! DKRepoTableViewCell
+		cell.updateWithRepo(gitHubAPI.repos[indexPath.row])
+		
+        return cell
     }
 
 }
