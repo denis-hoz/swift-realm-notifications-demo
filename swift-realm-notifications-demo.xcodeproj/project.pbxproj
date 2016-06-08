@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B13AEFA1D05C14600232CFB /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B13AEF91D05C14600232CFB /* Networking.framework */; };
+		3B13AEFC1D05E93300232CFB /* AFDateHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B13AEFB1D05E93300232CFB /* AFDateHelper.framework */; };
+		3B13AEFE1D05EBDF00232CFB /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B13AEFD1D05EBDF00232CFB /* ObjectMapper.framework */; };
 		3B75DCC21D01DA6300FBEF98 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B75DCC01D01DA6300FBEF98 /* Realm.framework */; };
 		3B75DCC31D01DA6300FBEF98 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B75DCC11D01DA6300FBEF98 /* RealmSwift.framework */; };
 		C8220059F1413E22FF66924B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8220FDC1BEF464D45D1A810 /* Assets.xcassets */; };
 		C82203FA199455A417EAECB9 /* DKRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8220204D9A777479F6151D8 /* DKRepo.swift */; };
 		C82205B7A435FB5DF6C12A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C822088CFFE2E6CCD7D8CDCE /* LaunchScreen.storyboard */; };
 		C8220917A45F2331ACECB9DE /* DKRepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8220B167FDA815111622DA0 /* DKRepoTableViewCell.swift */; };
+		C8220A022220B098418F2A26 /* DKRESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8220D466D71F11603C5426C /* DKRESTClient.swift */; };
 		C8220BC9CDFF4FF3392D7AC6 /* DKGitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8220216071085B112B18D8A /* DKGitHubAPI.swift */; };
 		C8220BFE4C5A24A7A274CE47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82207C906529295FACFC440 /* AppDelegate.swift */; };
 		C8220CC1152D2F65B42661DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8220942CD44221AFC5310AF /* Main.storyboard */; };
@@ -21,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B13AEF91D05C14600232CFB /* Networking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Networking.framework; path = Carthage/Build/iOS/Networking.framework; sourceTree = "<group>"; };
+		3B13AEFB1D05E93300232CFB /* AFDateHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFDateHelper.framework; path = Carthage/Build/iOS/AFDateHelper.framework; sourceTree = "<group>"; };
+		3B13AEFD1D05EBDF00232CFB /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		3B75DCC01D01DA6300FBEF98 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		3B75DCC11D01DA6300FBEF98 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		C8220204D9A777479F6151D8 /* DKRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKRepo.swift; sourceTree = "<group>"; };
@@ -34,6 +41,7 @@
 		C822097E92CA68C4828FC1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C8220B167FDA815111622DA0 /* DKRepoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKRepoTableViewCell.swift; sourceTree = "<group>"; };
 		C8220BD9ECD9B1EE9B0655EE /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		C8220D466D71F11603C5426C /* DKRESTClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKRESTClient.swift; sourceTree = "<group>"; };
 		C8220FDC1BEF464D45D1A810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B13AEFC1D05E93300232CFB /* AFDateHelper.framework in Frameworks */,
+				3B13AEFA1D05C14600232CFB /* Networking.framework in Frameworks */,
+				3B13AEFE1D05EBDF00232CFB /* ObjectMapper.framework in Frameworks */,
 				3B75DCC21D01DA6300FBEF98 /* Realm.framework in Frameworks */,
 				3B75DCC31D01DA6300FBEF98 /* RealmSwift.framework in Frameworks */,
 			);
@@ -145,6 +156,9 @@
 		C822091E2CC526F2D2F9A395 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B13AEFD1D05EBDF00232CFB /* ObjectMapper.framework */,
+				3B13AEFB1D05E93300232CFB /* AFDateHelper.framework */,
+				3B13AEF91D05C14600232CFB /* Networking.framework */,
 				3B75DCC01D01DA6300FBEF98 /* Realm.framework */,
 				3B75DCC11D01DA6300FBEF98 /* RealmSwift.framework */,
 			);
@@ -155,8 +169,17 @@
 			isa = PBXGroup;
 			children = (
 				C822027735F3F8F5F3686063 /* GitHubAPI */,
+				C8220E8670240AB02EF0442F /* Networking */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		C8220E8670240AB02EF0442F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C8220D466D71F11603C5426C /* DKRESTClient.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		C8220F86DD2D52C0CA25EAF7 /* Products */ = {
@@ -177,6 +200,7 @@
 				C82206E7EE454CECCB7AC0FB /* Sources */,
 				C82200E30845031BF5796AD8 /* Frameworks */,
 				C8220CB7F7B938AF4287186B /* Resources */,
+				3B5FA6321D06CA1700F6F88F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -228,6 +252,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B5FA6321D06CA1700F6F88F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AFDateHelper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Networking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C82206E7EE454CECCB7AC0FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -239,6 +284,7 @@
 				C8220BC9CDFF4FF3392D7AC6 /* DKGitHubAPI.swift in Sources */,
 				C8220EF7DB4FE2AAC1495298 /* DKReposViewController.swift in Sources */,
 				C8220917A45F2331ACECB9DE /* DKRepoTableViewCell.swift in Sources */,
+				C8220A022220B098418F2A26 /* DKRESTClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

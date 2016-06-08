@@ -1,1 +1,4 @@
 github "realm/realm-cocoa"
+github "3lvis/Networking"
+github "melvitax/AFDateHelper"
+github "Hearst-DD/ObjectMapper"
