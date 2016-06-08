@@ -6,7 +6,6 @@
 import Foundation
 import RealmSwift
 
-protocol DKGitHubAPIProviding {
-	var repos: Results<DKRepo> { get }
-	var token: NotificationToken? { get }
+protocol DKGitHubAPIProviding{
+    func fetch()
 }

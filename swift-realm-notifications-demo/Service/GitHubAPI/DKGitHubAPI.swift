@@ -5,12 +5,40 @@
 
 import Foundation
 import RealmSwift
+import Networking
+import AFDateHelper
+import ObjectMapper
 
 class DKGitHubAPI : DKGitHubAPIProviding {
-    let repos: Results<DKRepo> = {
-        let realm = try! Realm()
-		return realm.objects(DKRepo).sorted("pushedAt", ascending: false)
-    }()
+    let realm = try! Realm()
+    let restClient = DKRESTClient()
 
-    var token: NotificationToken?
+}
+
+extension DKGitHubAPI {
+    // MARK: fetch
+    func fetch() {
+        restClient.fetchRepos { [weak self] (JSON, error) in
+            guard let JSON = JSON as? Array<[String: AnyObject]> else { return }
+            guard let repos = self?.jsonToRepos(JSON) else { return }
+            self?.persistRepos(repos)
+        }
+    }
+    
+    func jsonToRepos(jsonRepos: Array<[String: AnyObject]>) -> [DKRepo] {
+        return jsonRepos.flatMap( Mapper<DKRepo>().map )
+    }
+}
+
+extension DKGitHubAPI {
+    // MARK: persist
+    func persistRepos(repos: [DKRepo]) {
+        try! realm.write {
+            repos.forEach( addOrUpdateRepo )
+        }
+    }
+    
+    func addOrUpdateRepo(repo: DKRepo) {
+        realm.add(repo, update: true)
+    }
 }
