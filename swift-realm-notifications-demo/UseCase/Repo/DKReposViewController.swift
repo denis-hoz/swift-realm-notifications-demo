@@ -6,12 +6,17 @@
 //  Copyright (c) 2016 Denis Kapusta Demo. All rights reserved.
 //
 
-
 import UIKit
-
+import RealmSwift
 
 class DKReposViewController: UIViewController {
+    let repos: Results<DKRepo> = {
+        let realm = try! Realm()
+        return realm.objects(DKRepo).sorted("pushedAt", ascending: false)
+    }()
+    var token: NotificationToken?
 	let gitHubAPI: DKGitHubAPIProviding
+	@IBOutlet var tableView: UITableView!
 	
 	init(gitHubAPIProviding: DKGitHubAPIProviding) {
 		gitHubAPI = gitHubAPIProviding
@@ -24,27 +29,69 @@ class DKReposViewController: UIViewController {
 	}
 
     override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad()
+        addNotifications()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        gitHubAPI.fetch()
     }
 
-
     override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+extension DKReposViewController {
+    func addNotifications() {
+        token = repos.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
+            guard let tableView = self?.tableView else { return }
+            
+            switch changes {
+            case .Initial:
+                tableView.reloadData()
+                break
+            case .Update( _, _, let insertions, _):
+                guard let indexPathsForInsertions = self?.indexPaths(forInsertions: insertions) else {return}
+                
+                tableView.beginUpdates()
+                
+                tableView.insertRowsAtIndexPaths(indexPathsForInsertions, withRowAnimation: .Automatic)
+                
+                tableView.endUpdates()
+                break
+            case .Error(let error):
+                print(error)
+                break
+            }
+        }
+    }
+
+    func indexPaths(forInsertions insertions: [Int]) -> [NSIndexPath] {
+        return insertions.map( indexPathForRow )
+    }
+    
+    func indexPathForRow(row: Int) -> NSIndexPath {
+        return NSIndexPath(forRow: row, inSection: 0)
     }
 }
 
 extension DKReposViewController: UITableViewDataSource {
-    @available(iOS 2.0, *) func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gitHubAPI.repos.count
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return repos.count
     }
 
-    @available(iOS 2.0, *) func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("DKRepoTableViewCell", forIndexPath: indexPath) as! DKRepoTableViewCell
-		cell.updateWithRepo(gitHubAPI.repos[indexPath.row])
+		cell.updateWithRepo(repos[indexPath.row])
 		
         return cell
     }
 
+}
+
+extension DKReposViewController: UITableViewDelegate {
+    
 }
