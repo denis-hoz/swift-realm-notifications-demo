@@ -14,6 +14,7 @@ class DKRepoTableViewCell: UITableViewCell {
 
 extension DKRepoTableViewCell: DKRepoUpdatable {
     func updateWithRepo(repo: DKRepo) {
-        textLabel?.text = repo.name
+        textLabel!.text = repo.name
+        detailTextLabel!.text = "\(repo.stars)🌟 pushed: \(repo.pushedAt.toString())"
     }
 }
